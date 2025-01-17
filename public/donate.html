@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Support Our Movie Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle, #1b1b1b, #111);
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .donate-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .donate-container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        .donate-container p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #cccccc;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .donate-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff8c00, #e52e71);
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(229, 46, 113, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: glowPulse 2s infinite;
+        }
+
+        .donate-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(229, 46, 113, 0.5);
+        }
+
+        .floating-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-stars span {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #e52e71;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: floatStars 5s infinite ease-in-out;
+        }
+
+        @keyframes floatStars {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 5px 15px rgba(229, 46, 113, 0.3); }
+            50% { box-shadow: 0 10px 25px rgba(229, 46, 113, 0.5); }
+        }
+
+        /* Star positions */
+        .floating-stars span:nth-child(1) {
+            top: 10%; left: 15%; animation-duration: 7s; animation-delay: 0s; }
+        .floating-stars span:nth-child(2) {
+            top: 50%; left: 35%; animation-duration: 6s; animation-delay: 1s; }
+        .floating-stars span:nth-child(3) {
+            top: 80%; left: 70%; animation-duration: 8s; animation-delay: 2s; }
+        .floating-stars span:nth-child(4) {
+            top: 40%; left: 20%; animation-duration: 5s; animation-delay: 3s; }
+        .floating-stars span:nth-child(5) {
+            top: 90%; left: 50%; animation-duration: 6.5s; animation-delay: 4s; }
+    </style>
+</head>
+<body>
+    <div class="donate-container">
+        <h1>Donate to Our Movie Website</h1>
+        <p>Help us bring amazing movie content to life. Your support makes it possible!</p>
+        <a class="donate-btn" href="https://pay.yoco.com/coderx" target="_blank">Donate Now</a>
+    </div>
+
+    <div class="floating-stars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
